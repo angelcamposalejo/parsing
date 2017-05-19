@@ -8,7 +8,10 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE , LPTSTR cmdLine, int cmdSh
 
 void Entero::Window_Open(Win::Event& e)
 {
-	int age = 22;
-	this->MessageBox(Sys::Convert::ToString(age), L"Edad", MB_OK);
+	int ancho = Sys::Convert::ToInt(L"10 metros");
+	ancho--;
+	wstring texto;
+	Sys::Format(texto, L"El ancho es %d", ancho);
+	this->MessageBox(L"*****Ancho*****",texto,MB_OK|MB_ICONINFORMATION);
 }
 
