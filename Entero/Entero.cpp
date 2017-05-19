@@ -8,10 +8,9 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE , LPTSTR cmdLine, int cmdSh
 
 void Entero::Window_Open(Win::Event& e)
 {
-	int ancho = Sys::Convert::ToInt(L"10 metros");
-	ancho--;
+	double distancia = Sys::Convert::ToDouble(L"18.126 Km");
 	wstring texto;
-	Sys::Format(texto, L"El ancho es %d", ancho);
-	this->MessageBox(L"*****Ancho*****",texto,MB_OK|MB_ICONINFORMATION);
+	Sys::Format(texto, L"%g", distancia);
+	this->MessageBox(texto,texto,MB_OK|MB_ICONINFORMATION);
 }
 
